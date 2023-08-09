@@ -1,0 +1,13 @@
+{
+    "locales": [
+        "tr-TR",
+        "en-US"
+    ],
+    "defaultLocale": "tr-TR",
+    "pages": {
+        "*": [
+            "common"
+        ]
+    },
+    "localeDetection": true
+}
