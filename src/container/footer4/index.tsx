@@ -1,12 +1,10 @@
-import { Box, Button, Grid, Typography, IconButton } from '@mui/material';
 import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import Logo from '@/components/logo';
+import Copyright from '@/components/copyright';
+import SocialLinks from '@/components/socialLinks';
+import { Box, Grid, Typography } from '@mui/material';
 
-function Footer3() {
-  const pages = ['About', 'Portfolio', 'Blog', 'Contact'];
-
+function Footer4() {
   return (
     <Grid
       container
@@ -16,6 +14,7 @@ function Footer3() {
         alignItems: 'center',
       }}
     >
+      {/* left start */}
       <Grid item xs={12} sm={12} md={6} lg={6}>
         <Grid container>
           <Grid item xs={12} sm={4} md={4} lg={4}>
@@ -26,14 +25,7 @@ function Footer3() {
                 },
               }}
             >
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 'bold',
-                }}
-              >
-                LOGO
-              </Typography>
+              <Logo />
             </Box>
           </Grid>
           <Grid item xs={12} sm={8} md={8} lg={8}>
@@ -46,7 +38,7 @@ function Footer3() {
             >
               <Typography
                 sx={{
-                  fontSize: '14px',
+                  fontSize: '12px',
                 }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -56,6 +48,9 @@ function Footer3() {
           </Grid>
         </Grid>
       </Grid>
+      {/* left end */}
+
+      {/* right start */}
       <Grid item xs={12} sm={12} md={6} lg={6}>
         <Box
           sx={{
@@ -84,15 +79,7 @@ function Footer3() {
               },
             }}
           >
-            <IconButton>
-              <FacebookIcon></FacebookIcon>
-            </IconButton>
-            <IconButton>
-              <TwitterIcon></TwitterIcon>
-            </IconButton>
-            <IconButton>
-              <InstagramIcon></InstagramIcon>
-            </IconButton>
+            <SocialLinks />
           </Box>
           <Box
             sx={{
@@ -107,19 +94,13 @@ function Footer3() {
               },
             }}
           >
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: '12px',
-              }}
-            >
-              © Copyright Lorem ipsum 2023
-            </Typography>
+            <Copyright />
           </Box>
         </Box>
       </Grid>
+      {/* right end */}
     </Grid>
   );
 }
 
-export default Footer3;
+export default Footer4;

@@ -1,20 +1,30 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Typography,
-  IconButton,
-  TextField,
-} from '@mui/material';
 import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-function Footer3() {
-  const pages = ['Home Page', 'About', 'Portfolio', 'Blog', 'Contact'];
+import Logo from '@/components/logo';
+import { Box, Grid } from '@mui/material';
+import Copyright from '@/components/copyright';
+import SocialLinks from '@/components/socialLinks';
+import FooterMenuGroup from '@/components/footerMenuGroup';
 
+function Footer3() {
+  /* pages */
+  const pages = [
+    {
+      name: 'About',
+      link: '/about',
+    },
+    {
+      name: 'Portfolio',
+      link: '/portfolio',
+    },
+    {
+      name: 'Blog',
+      link: '/blog',
+    },
+    {
+      name: 'Contact',
+      link: '/contact',
+    },
+  ];
   return (
     <>
       <Grid
@@ -41,14 +51,7 @@ function Footer3() {
               },
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: 'bold',
-              }}
-            >
-              LOGO
-            </Typography>
+            <Logo />
           </Box>
         </Grid>
 
@@ -73,19 +76,7 @@ function Footer3() {
               },
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{
-                  fontSize: '12px',
-                  fontWeight: 'bold',
-                  color: 'black',
-                  display: 'block',
-                }}
-              >
-                {page}
-              </Button>
-            ))}
+            <FooterMenuGroup centered pages={pages} />
           </Box>
         </Grid>
       </Grid>
@@ -94,7 +85,8 @@ function Footer3() {
         container
         sx={{
           background: '#dedede',
-          p: 2,
+          px: 4,
+          py: 1,
           alignItems: 'center',
         }}
       >
@@ -114,14 +106,7 @@ function Footer3() {
               },
             }}
           >
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: '12px',
-              }}
-            >
-              © Copyright Lorem ipsum 2023
-            </Typography>
+            <Copyright />
           </Box>
         </Grid>
 
@@ -139,15 +124,7 @@ function Footer3() {
               },
             }}
           >
-            <IconButton>
-              <FacebookIcon></FacebookIcon>
-            </IconButton>
-            <IconButton>
-              <TwitterIcon></TwitterIcon>
-            </IconButton>
-            <IconButton>
-              <InstagramIcon></InstagramIcon>
-            </IconButton>
+            <SocialLinks />
           </Box>
         </Grid>
       </Grid>

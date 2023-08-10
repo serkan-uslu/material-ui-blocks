@@ -1,16 +1,22 @@
-import { Box, Button, Grid, Typography } from '@mui/material';
 import React from 'react';
+import Logo from '@/components/logo';
+import { Box, Grid } from '@mui/material';
+import Copyright from '@/components/copyright';
 
 function Footer1() {
+  /* colors */
+  const background = '#eeeeee';
+
   return (
     <Grid
       container
       sx={{
-        background: '#eeeeee',
+        background: background,
         p: 4,
         alignItems: 'center',
       }}
     >
+      {/* left start */}
       <Grid item xs={3} sm={6} md={6} lg={6}>
         <Box
           sx={{
@@ -19,16 +25,12 @@ function Footer1() {
             justifyContent: 'flex-start',
           }}
         >
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 'bold',
-            }}
-          >
-            LOGO
-          </Typography>
+          <Logo />
         </Box>
       </Grid>
+      {/* left end */}
+
+      {/* right start */}
       <Grid item xs={9} sm={6} md={6} lg={6} sx={{}}>
         <Box
           sx={{
@@ -37,16 +39,10 @@ function Footer1() {
             justifyContent: 'flex-end',
           }}
         >
-          <Typography
-            variant="body2"
-            sx={{
-              fontSize: '12px',
-            }}
-          >
-            © Copyright Lorem ipsum 2023
-          </Typography>
+          <Copyright />
         </Box>
       </Grid>
+      {/* right end */}
     </Grid>
   );
 }

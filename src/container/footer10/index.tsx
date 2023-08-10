@@ -1,20 +1,27 @@
-import { Box, Button, Grid, Typography, IconButton } from '@mui/material';
 import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-function Footer3() {
-  const pages = ['About', 'Portfolio', 'Blog', 'Contact'];
-  const pages2 = ['Tern of Servcies', 'Privacy Policy'];
+import { Box, Grid } from '@mui/material';
+import Copyright from '@/components/copyright';
+import FooterMenuGroup from '@/components/footerMenuGroup';
+
+function Footer10() {
+  /* pages */
+  const pages2 = [
+    {
+      name: 'Term of Servcies',
+      link: '/',
+    },
+    {
+      name: 'Privacy Policy',
+      link: '/',
+    },
+  ];
 
   return (
     <>
       <Grid
         container
         sx={{
-          background: '#eeeeee',
+          background: '#eee',
           p: 4,
           alignItems: 'center',
         }}
@@ -38,14 +45,7 @@ function Footer3() {
               },
             }}
           >
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: '12px',
-              }}
-            >
-              © Copyright Lorem ipsum 2023
-            </Typography>
+            <Copyright />
           </Box>
         </Grid>
 
@@ -54,7 +54,10 @@ function Footer3() {
             sx={{
               display: 'flex',
               mb: {
-                xs: 3,
+                xs: 2,
+                lg: 0,
+                md: 0,
+                sm: 0,
               },
               justifyContent: {
                 xs: 'center',
@@ -70,19 +73,7 @@ function Footer3() {
               },
             }}
           >
-            {pages2.map((page) => (
-              <Button
-                key={page}
-                sx={{
-                  fontSize: '12px',
-                  fontWeight: 'bold',
-                  color: 'black',
-                  display: 'block',
-                }}
-              >
-                {page}
-              </Button>
-            ))}
+            <FooterMenuGroup pages={pages2} />
           </Box>
         </Grid>
       </Grid>
@@ -90,4 +81,4 @@ function Footer3() {
   );
 }
 
-export default Footer3;
+export default Footer10;

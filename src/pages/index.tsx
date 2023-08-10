@@ -1,5 +1,5 @@
-import { Box, Button, Divider } from '@mui/material';
 import React from 'react';
+import { Box, Divider } from '@mui/material';
 import Footer1 from 'container/footer1/index';
 import Footer2 from 'container/footer2/index';
 import Footer3 from 'container/footer3/index';
@@ -20,6 +20,9 @@ import Footer16 from 'container/footer16/index';
 function HomePage() {
   return (
     <Box>
+      <Box my={2}>
+        <Divider></Divider>
+      </Box>
       <Footer1 />
       <Box my={2}>
         <Divider></Divider>

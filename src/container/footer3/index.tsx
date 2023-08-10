@@ -1,21 +1,43 @@
-import { Box, Button, Grid, Typography, IconButton } from '@mui/material';
 import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import Logo from '@/components/logo';
+import { Box, Grid } from '@mui/material';
+import SocialLinks from '@/components/socialLinks';
+import FooterMenuGroup from '@/components/footerMenuGroup';
 
 function Footer3() {
-  const pages = ['About', 'Portfolio', 'Blog', 'Contact'];
+  /* pages */
+  const pages = [
+    {
+      name: 'About',
+      link: '/about',
+    },
+    {
+      name: 'Portfolio',
+      link: '/portfolio',
+    },
+    {
+      name: 'Blog',
+      link: '/blog',
+    },
+    {
+      name: 'Contact',
+      link: '/contact',
+    },
+  ];
+
+  /* colors */
+  const background = '#eeeeee';
 
   return (
     <Grid
       container
       sx={{
-        background: '#eeeeee',
+        background: background,
         p: 4,
         alignItems: 'center',
       }}
     >
+      {/* left start */}
       <Grid item xs={12} sm={4} md={4} lg={4}>
         <Box
           sx={{
@@ -27,18 +49,20 @@ function Footer3() {
               md: 'flex-start',
               sm: 'flex-start',
             },
+            mb: {
+              xs: 1,
+              lg: 0,
+              md: 0,
+              sm: 0,
+            },
           }}
         >
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 'bold',
-            }}
-          >
-            LOGO
-          </Typography>
+          <Logo />
         </Box>
       </Grid>
+      {/* left end */}
+
+      {/* center start  */}
       <Grid item xs={12} sm={4} md={4} lg={4}>
         <Box
           sx={{
@@ -54,21 +78,12 @@ function Footer3() {
             },
           }}
         >
-          {pages.map((page) => (
-            <Button
-              key={page}
-              sx={{
-                fontSize: '12px',
-                fontWeight: 'bold',
-                color: 'black',
-                display: 'block',
-              }}
-            >
-              {page}
-            </Button>
-          ))}
+          <FooterMenuGroup centered pages={pages} />
         </Box>
       </Grid>
+      {/* center end  */}
+
+      {/* right start */}
       <Grid item xs={12} sm={4} md={4} lg={4}>
         <Box
           sx={{
@@ -82,17 +97,10 @@ function Footer3() {
             },
           }}
         >
-          <IconButton>
-            <FacebookIcon></FacebookIcon>
-          </IconButton>
-          <IconButton>
-            <TwitterIcon></TwitterIcon>
-          </IconButton>
-          <IconButton>
-            <InstagramIcon></InstagramIcon>
-          </IconButton>
+          <SocialLinks />
         </Box>
       </Grid>
+      {/* right end */}
     </Grid>
   );
 }

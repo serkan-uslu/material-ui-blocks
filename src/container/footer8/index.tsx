@@ -1,26 +1,16 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Typography,
-  IconButton,
-  TextField,
-} from '@mui/material';
 import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-function Footer3() {
-  const pages = ['About', 'Portfolio', 'Blog', 'Contact'];
+import Logo from '@/components/logo';
+import { Box, Grid } from '@mui/material';
+import Copyright from '@/components/copyright';
+import SocialLinks from '@/components/socialLinks';
 
+function Footer8() {
   return (
     <>
       <Grid
         container
         sx={{
-          background: '#eeeeee',
+          background: '#eee',
           p: 4,
           alignItems: 'center',
         }}
@@ -38,14 +28,7 @@ function Footer3() {
               },
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: 'bold',
-              }}
-            >
-              LOGO
-            </Typography>
+            <Logo />
           </Box>
         </Grid>
       </Grid>
@@ -54,7 +37,8 @@ function Footer3() {
         container
         sx={{
           background: '#dedede',
-          p: 2,
+          px: 4,
+          py: 1,
           alignItems: 'center',
         }}
       >
@@ -77,14 +61,7 @@ function Footer3() {
               },
             }}
           >
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: '12px',
-              }}
-            >
-              © Copyright Lorem ipsum 2023
-            </Typography>
+            <Copyright />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={6}>
@@ -94,6 +71,9 @@ function Footer3() {
               flexDirection: 'row',
               mb: {
                 xs: 2,
+                lg: 0,
+                md: 0,
+                sm: 0,
               },
               justifyContent: {
                 xs: 'center',
@@ -103,15 +83,7 @@ function Footer3() {
               },
             }}
           >
-            <IconButton>
-              <FacebookIcon></FacebookIcon>
-            </IconButton>
-            <IconButton>
-              <TwitterIcon></TwitterIcon>
-            </IconButton>
-            <IconButton>
-              <InstagramIcon></InstagramIcon>
-            </IconButton>
+            <SocialLinks />
           </Box>
         </Grid>
       </Grid>
@@ -119,4 +91,4 @@ function Footer3() {
   );
 }
 
-export default Footer3;
+export default Footer8;

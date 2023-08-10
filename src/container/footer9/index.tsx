@@ -5,16 +5,49 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-function Footer3() {
-  const pages = ['About', 'Portfolio', 'Blog', 'Contact'];
-  const pages2 = ['Tern of Servcies', 'Privacy Policy'];
+import FooterMenuGroup from '@/components/footerMenuGroup';
+import Copyright from '@/components/copyright';
+import SocialLinks from '@/components/socialLinks';
+
+function Footer9() {
+  /* pages */
+  const pages = [
+    {
+      name: 'About',
+      link: '/about',
+    },
+    {
+      name: 'Portfolio',
+      link: '/portfolio',
+    },
+    {
+      name: 'Blog',
+      link: '/blog',
+    },
+    {
+      name: 'Contact',
+      link: '/contact',
+    },
+  ];
+
+  /* pages */
+  const pages2 = [
+    {
+      name: 'Term of Servcies',
+      link: '/',
+    },
+    {
+      name: 'Privacy Policy',
+      link: '/',
+    },
+  ];
 
   return (
     <>
       <Grid
         container
         sx={{
-          background: '#eeeeee',
+          background: '#eee',
           p: 4,
           alignItems: 'center',
         }}
@@ -40,19 +73,7 @@ function Footer3() {
               },
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{
-                  fontSize: '12px',
-                  fontWeight: 'bold',
-                  color: 'black',
-                  display: 'block',
-                }}
-              >
-                {page}
-              </Button>
-            ))}
+            <FooterMenuGroup centered pages={pages} />
           </Box>
         </Grid>
 
@@ -75,15 +96,7 @@ function Footer3() {
               },
             }}
           >
-            <IconButton>
-              <FacebookIcon></FacebookIcon>
-            </IconButton>
-            <IconButton>
-              <TwitterIcon></TwitterIcon>
-            </IconButton>
-            <IconButton>
-              <InstagramIcon></InstagramIcon>
-            </IconButton>
+            <SocialLinks />
           </Box>
         </Grid>
 
@@ -106,14 +119,7 @@ function Footer3() {
               },
             }}
           >
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: '12px',
-              }}
-            >
-              © Copyright Lorem ipsum 2023
-            </Typography>
+            <Copyright />
           </Box>
         </Grid>
 
@@ -138,19 +144,7 @@ function Footer3() {
               },
             }}
           >
-            {pages2.map((page) => (
-              <Button
-                key={page}
-                sx={{
-                  fontSize: '12px',
-                  fontWeight: 'bold',
-                  color: 'black',
-                  display: 'block',
-                }}
-              >
-                {page}
-              </Button>
-            ))}
+            <FooterMenuGroup centered pages={pages2} />
           </Box>
         </Grid>
       </Grid>
@@ -158,4 +152,4 @@ function Footer3() {
   );
 }
 
-export default Footer3;
+export default Footer9;

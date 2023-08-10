@@ -1,18 +1,42 @@
-import { Box, Button, Grid, Typography } from '@mui/material';
 import React from 'react';
+import Logo from '@/components/logo';
+import { Box, Grid } from '@mui/material';
+import FooterMenuGroup from '@/components/footerMenuGroup';
 
 function Footer2() {
-  const pages = ['About', 'Portfolio', 'Blog', 'Contact'];
+  /* pages */
+  const pages = [
+    {
+      name: 'About',
+      link: '/about',
+    },
+    {
+      name: 'Portfolio',
+      link: '/portfolio',
+    },
+    {
+      name: 'Blog',
+      link: '/blog',
+    },
+    {
+      name: 'Contact',
+      link: '/contact',
+    },
+  ];
+
+  /* colors */
+  const background = '#eeeeee';
 
   return (
     <Grid
       container
       sx={{
-        background: '#eeeeee',
+        background: background,
         p: 4,
         alignItems: 'center',
       }}
     >
+      {/* left start */}
       <Grid item xs={12} sm={6} md={6} lg={6}>
         <Box
           sx={{
@@ -24,18 +48,20 @@ function Footer2() {
               md: 'flex-start',
               sm: 'flex-start',
             },
+            mb: {
+              xs: 1,
+              lg: 0,
+              md: 0,
+              sm: 0,
+            },
           }}
         >
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 'bold',
-            }}
-          >
-            LOGO
-          </Typography>
+          <Logo />
         </Box>
       </Grid>
+      {/* left end */}
+
+      {/* right start */}
       <Grid item xs={12} sm={6} md={6} lg={6} sx={{}}>
         <Box
           sx={{
@@ -49,22 +75,10 @@ function Footer2() {
             },
           }}
         >
-          {pages.map((page) => (
-            <Button
-              key={page}
-              sx={{
-                my: 2,
-                fontSize: '12px',
-                fontWeight: 'bold',
-                color: 'black',
-                display: 'block',
-              }}
-            >
-              {page}
-            </Button>
-          ))}
+          <FooterMenuGroup pages={pages} />
         </Box>
       </Grid>
+      {/* right end */}
     </Grid>
   );
 }
