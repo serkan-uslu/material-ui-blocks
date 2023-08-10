@@ -10,6 +10,12 @@ import Footer7 from 'container/footer7/index';
 import Footer8 from 'container/footer8/index';
 import Footer9 from 'container/footer9/index';
 import Footer10 from 'container/footer10/index';
+import Footer11 from 'container/footer11/index';
+import Footer12 from 'container/footer12/index';
+import Footer13 from 'container/footer13/index';
+import Footer14 from 'container/footer14/index';
+import Footer15 from 'container/footer15/index';
+import Footer16 from 'container/footer16/index';
 
 function HomePage() {
   return (
@@ -51,6 +57,30 @@ function HomePage() {
         <Divider></Divider>
       </Box>
       <Footer10 />
+      <Box my={2}>
+        <Divider></Divider>
+      </Box>
+      <Footer11 />
+      <Box my={2}>
+        <Divider></Divider>
+      </Box>
+      <Footer12 />
+      <Box my={2}>
+        <Divider></Divider>
+      </Box>
+      <Footer13 />
+      <Box my={2}>
+        <Divider></Divider>
+      </Box>
+      <Footer14 />
+      <Box my={2}>
+        <Divider></Divider>
+      </Box>
+      <Footer15 />
+      <Box my={2}>
+        <Divider></Divider>
+      </Box>
+      <Footer16 />
       <Box my={2}>
         <Divider></Divider>
       </Box>
