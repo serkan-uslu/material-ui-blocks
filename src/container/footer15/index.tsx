@@ -42,7 +42,10 @@ function Footer15() {
               display: 'flex',
               flexDirection: 'row',
               justifyContent: {
-                xs: 'flex-start',
+                xs: 'center',
+                lg: 'flex-start',
+                md: 'flex-start',
+                sm: 'flex-start',
               },
               mb: {
                 xs: 2,

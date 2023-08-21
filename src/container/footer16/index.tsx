@@ -59,9 +59,6 @@ function Footer3() {
           <Box
             sx={{
               display: 'flex',
-              mb: {
-                xs: 2,
-              },
               flexDirection: {
                 xs: 'column',
                 md: 'row',
@@ -94,10 +91,13 @@ function Footer3() {
           <Box
             sx={{
               display: 'flex',
+              flexDirection: 'row',
               mb: {
                 xs: 2,
+                lg: 0,
+                md: 0,
+                sm: 0,
               },
-              flexDirection: 'row',
               justifyContent: {
                 xs: 'center',
                 md: 'flex-start',
