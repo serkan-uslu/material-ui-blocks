@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-function Contact1() {
+function Contact2() {
   /* colors */
   const background = '#eeeeee';
 
@@ -11,7 +11,6 @@ function Contact1() {
       sx={{
         background: background,
         p: 6,
-        alignItems: 'center',
       }}
     >
       {/* left start */}
@@ -20,7 +19,7 @@ function Contact1() {
           sx={{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             mb: 3,
           }}
         >
@@ -30,7 +29,7 @@ function Contact1() {
               fontWeight: 'bold',
             }}
           >
-            Contact us
+            Get in touch
           </Typography>
         </Box>
       </Grid>
@@ -42,21 +41,14 @@ function Contact1() {
           sx={{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
           }}
         >
-          <Container maxWidth={'sm'}>
-            <Typography
-              variant="body2"
-              sx={{
-                textAlign: 'center',
-              }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              vitae nisl finibus risus imperdiet molestie. Aliquam tristique
-              ornare auctor.
-            </Typography>
-          </Container>
+          <Typography variant="body2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            vitae nisl finibus risus imperdiet molestie. Aliquam tristique
+            ornare auctor.
+          </Typography>
         </Box>
       </Grid>
       {/* right end */}
@@ -64,4 +56,4 @@ function Contact1() {
   );
 }
 
-export default Contact1;
+export default Contact2;

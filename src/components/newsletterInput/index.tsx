@@ -6,6 +6,7 @@ function NewsletterInput() {
     <TextField
       sx={{
         background: '#fff',
+        width: '100%',
       }}
       id="standard-name"
       placeholder="Your Email"

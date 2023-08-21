@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
-function Contact1() {
+function Contact3() {
   /* colors */
   const background = '#eeeeee';
 
@@ -30,7 +30,7 @@ function Contact1() {
               fontWeight: 'bold',
             }}
           >
-            Contact us
+            Free consultation
           </Typography>
         </Box>
       </Grid>
@@ -43,6 +43,7 @@ function Contact1() {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            mb: 4,
           }}
         >
           <Container maxWidth={'sm'}>
@@ -58,10 +59,21 @@ function Contact1() {
             </Typography>
           </Container>
         </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+          }}
+        >
+          <Button variant="contained" disableElevation color="primary">
+            Lorem Ipsum
+          </Button>
+        </Box>
       </Grid>
       {/* right end */}
     </Grid>
   );
 }
 
-export default Contact1;
+export default Contact3;
