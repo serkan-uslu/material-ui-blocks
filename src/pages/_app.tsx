@@ -11,6 +11,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { ColorModeContext } from 'context/themeColorMode';
 import createEmotionCache from 'config/createEmotionCache';
 import { CacheProvider, EmotionCache } from '@emotion/react';
+import { StyledEngineProvider } from '@mui/material/styles';
 
 // css
 import '../styles/globals.css';
@@ -73,12 +74,14 @@ export default function MyApp(props: MyAppProps) {
             site_name: 'SiteName',
           }}
         />
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
+        <StyledEngineProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ThemeProvider>
+        </StyledEngineProvider>
       </CacheProvider>
     </ColorModeContext.Provider>
   );

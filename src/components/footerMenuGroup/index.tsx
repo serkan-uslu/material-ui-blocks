@@ -2,14 +2,14 @@ import React from 'react';
 import { Button } from '@mui/material';
 
 function FooterMenuGroup(props: any) {
-  const { pages, centered = false, bold = false } = props;
+  const { pages, centered = false, bold = false, my = 1 } = props;
 
   return pages.map((page: any, index: any) => (
     <Button
       key={index}
       href={page.link}
       sx={{
-        my: 1,
+        my: my,
         textAlign: centered && 'center',
         fontSize: '12px',
         fontWeight: bold && 'bold',
